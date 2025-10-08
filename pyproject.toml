@@ -6,7 +6,7 @@ authors = [
     {name = "ji-min0",email = "k.jimin2002@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10,<3.13"
 dependencies = [
     "fastapi (>=0.118.0,<0.119.0)",
     "uvicorn (>=0.37.0,<0.38.0)",
@@ -18,7 +18,6 @@ dependencies = [
     "python-dotenv (==1.1.1)",
     "python-multipart (==0.0.20)"
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -49,11 +48,11 @@ dev = [
 line-length = 120
 
 [tool.ruff]
-target-version = "py313"
+target-version = "py312"
 
 [tool.mypy]
 plugins = ["pydantic.mypy"]
-python_version = 3.13
+python_version = 3.12
 strict = true
 
 [tool.coverage.run]
