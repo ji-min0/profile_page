@@ -1,4 +1,4 @@
-import json
+import orjson
 import pathlib
 
 from fastapi import APIRouter, Request
@@ -13,5 +13,5 @@ templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 @router.get("/projects", response_class=HTMLResponse)
 async def projects(request: Request) -> HTMLResponse:
     with open(BASE_DIR.parent / "projects.json", "r", encoding="utf-8") as f:
-        projects = json.load(f)
+        projects = orjson.loads(f.read())
     return templates.TemplateResponse("projects.html", {"request": request, "projects": projects})

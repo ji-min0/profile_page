@@ -1,4 +1,4 @@
-import json
+import orjson
 import pathlib
 import smtplib
 from email.mime.text import MIMEText
@@ -18,8 +18,8 @@ templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 # ===== Contact Form (GET) =====
 @router.get("/contact", response_class=HTMLResponse)
 async def contact_form(request: Request) -> HTMLResponse:
-    with open(BASE_DIR.parent / "projects.json", "r", encoding="utf-8") as f:
-        projects = json.load(f)
+    with open(BASE_DIR.parent / "projects.json", "rb", encoding="utf-8") as f:
+        projects = orjson.loads(f.read())
 
     return templates.TemplateResponse(
         "contact.html",
