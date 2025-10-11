@@ -1,129 +1,112 @@
 {% extends "base.html" %}
 
-{% block title %}Projects - Hanyul{% endblock %}
+{% block title %}Projects - Jimin{% endblock %}
 
 {% block content %}
 <style>
-  .card-img-top {
-    width: 100%;
-    height: 300px;
-    object-fit: contain; /* fit image without cropping */
-    background-color: #f8f9fa; /* fill empty space */
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-  }
-  .subproject-img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    background-color: #f8f9fa;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    margin: 0 8px;
-    transition: transform 0.3s ease;
-  }
-  .subproject-img:hover {
-    transform: scale(1.05);
-  }
-  #projectsRow {
-    display: flex;
-    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-  }
-  .subproject-card {
-    cursor: pointer;
-  }
-  .subproject-wrapper {
-    border: 1px solid #dee2e6;
-    border-top: 2px solid #0d6efd;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 0.25rem;
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-    top: 50%;
-    transform: translateY(-50%);
-    width: 5%;
-  }
-  .carousel-control-prev {
-    left: 220px; /* adjust to be fully inside sidebar */
-  }
-  .connector-line {
-    width: 2px;
-    background-color: #0d6efd;
-    margin: 0 auto;
-    height: 30px;
-  }
+    #projects{
+        padding: 50px 0;
+    }
+    .sub-title{
+        font-size: 60px;
+        color: #433e49
+    }
+    .work-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+    }
+    .work{
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+    .work img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+    }
+    .layer{
+        width: 100%;
+        height: 0;
+        background: linear-gradient(rgba(0,0,0,0.6), #928490);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        transition: height 0.5s;
+    }
+    .layer h3{
+        color: #f4f3f2;
+        font-weight: 500;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .layer p{
+        color: #f4f3f2;
+    }
+    .layer a{
+        margin-top: 20px;
+        color: #928490;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 50px;
+        background: #f4f3f2;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .work:hover img{
+        transform: scale(1.1);
+    }
+    .work:hover .layer{
+        height: 100%;
+    }
+    .btn.btn1{
+        display: block;
+        margin: 50px auto;
+        width: fit-content;
+        border: 1px solid #928490;
+        padding: 14px 50px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #928490;
+        transition: background 0.5s, color 0.5s;
+    }
+    .btn1:hover{
+        background: #928490;
+        color: #f4f3f2;
+    }
 </style>
-<div class="container">
-  <h2 class="text-center mb-5">All Projects</h2>
-  <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row" id="projectsRow">
-          {% for main_project in projects %}
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="{{ main_project.image }}" class="card-img-top" alt="{{ main_project.title }}">
-              <div class="card-body">
-                <h3 class="card-title">{{ main_project.title }}</h3>
-                <p class="card-text">{{ main_project["desc"] }}</p>
-              </div>
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1><br>
+        <div class="work-list">
+            {% for project in projects %}
+            <div class="work">
+                <img src="{{ project.image }}" alt="{{ project.title }}">
+                <div class="layer">
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.desc }}</p>
+                    <!-- 프로젝트 만들면 깃허브 레포 주소 넣을 예정-->
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
             </div>
-            <div class="connector-line"></div>
-            <div class="subproject-wrapper">
-              <div class="d-flex justify-content-center">
-                {% for key in ['mini1','mini2','mini3'] %}
-                  <img src="{{ main_project[key] or 'static/images/preparing.png' }}" class="subproject-img" alt="{{ key }}" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="document.getElementById('modalImage').src='{{ main_project[key] or 'static/images/preparing.png' }}'">
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-          {% endfor %}
+            {% endfor %}
         </div>
-      </div>
+        <a href="https://github.com/ji-min0?tab=repositories" class="btn btn1">See more<i class="fa-brands fa-github"></i></a>
     </div>
-  </div>
 </div>
-<button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Next</span>
-</button>
-
-<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-body">
-        <img id="modalImage" src="" class="img-fluid" alt="원본 이미지">
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  const row = document.querySelector('#projectsRow');
-  function slideLeft() {
-    row.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
-    row.style.transform = 'translateX(-33.33%)';
-    setTimeout(() => {
-      row.append(row.firstElementChild);
-      row.style.transition = 'none';
-      row.style.transform = 'translateX(0)';
-    }, 600);
-  }
-  function slideRight() {
-    row.insertBefore(row.lastElementChild, row.firstElementChild);
-    row.style.transition = 'none';
-    row.style.transform = 'translateX(-33.33%)';
-    setTimeout(() => {
-      row.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
-      row.style.transform = 'translateX(0)';
-    });
-  }
-  document.querySelector('.carousel-control-prev').addEventListener('click', slideLeft);
-  document.querySelector('.carousel-control-next').addEventListener('click', slideRight);
-</script>
 {% endblock %}
