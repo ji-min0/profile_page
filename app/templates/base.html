@@ -20,15 +20,13 @@
             </ul>
             <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
-        <div class="header-text">
-            <p>Backend Developer</p>
-            <h1>Hi, I'm <span>Jimin</span><br>Kang From Korea</h1>
-        </div>
+        {% block header_text %}{% endblock %}
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
     </div>
 </div>
-<div class="content">
-    {% block content %}{% endblock %}
-</div>
+
 <!-- --------------- sidemenu for small screens------------------- -->
 <script>
     const sidemeu = document.getElementById("sidemenu");
