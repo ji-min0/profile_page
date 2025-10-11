@@ -11,7 +11,7 @@ templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
 
 @router.get("/about", response_class=HTMLResponse)
-async def about(request: Request) -> HTMLResponse:
-    with open(BASE_DIR.parent / "projects.json", "rb") as f:
-        projects = orjson.loads(f.read())
-    return templates.TemplateResponse("about.html", {"request": request, "projects": projects})
+async def about(request: Request, lang:str = "kr") -> HTMLResponse:
+    with open(BASE_DIR.parent / "about.json", "rb") as f:
+        about = orjson.loads(f.read())
+    return templates.TemplateResponse("about.html", {"request": request, "about": about, "lang": "kr"})
