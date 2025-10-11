@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jimin Portfolio Website</title>
+    <link rel="stylesheet" href="/app/static/css/style.css">
+    <script src="https://kit.fontawesome.com/2271afb610.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <p class="logo">jimin | profile</p>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Backend Developer</p>
+            <h1>Hi, I'm <span>Jimin</span><br>Kang From Korea</h1>
+        </div>
+    </div>
+</div>
+
+<!------ about ------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            <img src="/app/static/images/user.gif" alt="coding monkey">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1><br>
+                <p>대학 시절 구어 말뭉치를 구축하고 형태소를 태깅하여 언어 데이터를 분석하는 과정에서 처음 파이썬을 접했습니다.
+                    원래라면 형태소를 하나하나 분석하느라 오래 걸릴 작업이었지만, 파이썬으로 몇 가지 조건만 만들어주니 순식간에 해결되었습니다.
+                    이를 계기로 데이터를 다루고 문제를 해결하는 프로그래밍의 세계에 본격적으로 관심을 갖게 되었습니다.</p>
+                <p>이후 다양한 프로젝트와 부트캠프를 통해 데이터베이스, API, 서버 구조 등 백엔드 핵심 기술을 체계적으로 학습하고 있습니다.
+                    특히 협업 과정에서 문제 해결 능력뿐만 아니라 이상적인 "소통"이 무엇인지 깨달을 수 있었습니다.
+                    서로 다른 사고를 가진 팀원들과 같은 목표를 향해 나아가는 과정은 사고를 확장시키고, 팀원 간 상호 보완적인 유기적 소통을 가능하게 해주었습니다.
+                    또한 이 과정에서 다른 누가 보더라도 이해할 수 있는 친절한 코드의 중요성도 체감했습니다.</p>
+                <p>앞으로는 비전공자라는 배경이 드러나지 않을 만큼 탄탄한 실력을 갖춘 백엔드 개발자가 되고자 합니다.
+                    팀과 프로젝트 속에서 자연스럽게 녹아들며 의미 있는 서비스를 만들어내는 것이 목표입니다.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>프로그래밍 언어 &ensp;| </span>&ensp; python</li>
+                        <li><span>웹 프레임워크 &ensp;| </span>&ensp; Django, FastAPI, Flask</li>
+                        <li><span>웹/클라이언트 &ensp;| </span> &ensp; HTML, CSS, JavaScript</li>
+                        <li><span>데이터베이스 &ensp;| </span> &ensp; MySQL, SQLite, EdgeDB(Gel)</li>
+                        <li><span>운영체제 / 환경 &ensp;| </span> &ensp; Linux, Docker, AWS</li>
+                        <li><span>버전 관리 / 협업 &ensp;| </span> &ensp; Git, Github</li>
+                        <li><span>개발 툴 / IDE &ensp;| </span> &ensp; VSCode, PyCharm </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span></span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2025.08. - 2025.02. | </span> OZ Coding School 부트캠프</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------projects----------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1><br>
+        <div class="work-list">
+            <div class="work">
+                <img src="/app/static/images/work-1.jpg" alt="work-1">
+                <div class="layer">
+                    <h3>프로젝트1 이름</h3>
+                    <p>프로젝트1 설명을 구구절절 멋지게 보이도록 적어보자..</p>
+                    <!-- 프로젝트 만들면 깃허브 레포 주소 넣을 예정-->
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="/app/static/images/work-2.jpg" alt="work-2">
+                <div class="layer">
+                    <h3>프로젝트2 이름</h3>
+                    <p>프로젝트2 설명을 구구절절 멋지게 보이도록 적어보자..</p>
+                    <!-- 프로젝트 만들면 깃허브 레포 주소 넣을 예정-->
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="/app/static/images/work-3.png" alt="work-3">
+                <div class="layer">
+                    <h3>프로젝트3 이름</h3>
+                    <p>프로젝트3 설명을 구구절절 멋지게 보이도록 적어보자..</p>
+                    <!-- 프로젝트 만들면 깃허브 레포 주소 넣을 예정-->
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/ji-min0?tab=repositories" class="btn btn1">See more <i class="fa-brands fa-github"></i></a>
+    </div>
+</div>
+
+<!-- ----------contact------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i> k.jimin2002@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen"></i> +82 10-5290-2503</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i>instagram</a>
+                    <a href="https://github.com/ji-min0"><i class="fa-brands fa-github"></i>github</a>
+                    <a href="https://hello-dev-world.tistory.com/"><i class="fa-solid fa-book"></i>tistory</a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+       © Jimin. My Profile Website
+    </div>
+</div>
+
+
+
+
+
+<!-- ------------about js 코드 ----------------- -->
+<script>
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(let tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(let tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-- --------------- sidemenu for small screens------------------- -->
+<script>
+    const sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>

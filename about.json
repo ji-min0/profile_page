@@ -1,0 +1,94 @@
+{
+  "kr": {
+    "paragraphs": [
+      "대학 시절 구어 말뭉치를 구축하고 형태소를 태깅하여 언어 데이터를 분석하는 과정에서 처음 파이썬을 접했습니다. 원래라면 형태소를 하나하나 분석하느라 오래 걸릴 작업이었지만, 파이썬으로 몇 가지 조건만 만들어주니 순식간에 해결되었습니다. 이를 계기로 데이터를 다루고 문제를 해결하는 프로그래밍의 세계에 본격적으로 관심을 갖게 되었습니다.",
+      "이후 다양한 프로젝트와 부트캠프를 통해 데이터베이스, API, 서버 구조 등 백엔드 핵심 기술을 체계적으로 학습하고 있습니다. 특히 협업 과정에서 문제 해결 능력뿐만 아니라 이상적인 '소통'이 무엇인지 깨달을 수 있었습니다. 서로 다른 사고를 가진 팀원들과 같은 목표를 향해 나아가는 과정은 사고를 확장시키고, 팀원 간 상호 보완적인 유기적 소통을 가능하게 해주었습니다.",
+      "또한 이 과정에서 다른 누가 보더라도 이해할 수 있는 친절한 코드의 중요성도 체감했습니다. 앞으로는 비전공자라는 배경이 드러나지 않을 만큼 탄탄한 실력을 갖춘 백엔드 개발자가 되고자 합니다. 팀과 프로젝트 속에서 자연스럽게 녹아들며 의미 있는 서비스를 만들어내는 것이 목표입니다."
+    ],
+    "tabs": {
+      "skills": [
+        {
+          "label": "프로그래밍 언어",
+          "value": "Python"
+        },
+        {
+          "label": "웹 프레임워크",
+          "value": "Django, FastAPI, Flask"
+        },
+        {
+          "label": "웹/클라이언트",
+          "value": "HTML, CSS, JavaScript"
+        },
+        {
+          "label": "데이터베이스",
+          "value": "MySQL, SQLite, EdgeDB(Gel)"
+        },
+        {
+          "label": "운영체제 / 환경",
+          "value": "Linux, Docker, AWS"
+        },
+        {
+          "label": "버전 관리 / 협업",
+          "value": "Git, Github"
+        },
+        {
+          "label": "개발 툴 / IDE",
+          "value": "VSCode, PyCharm"
+        }
+      ],
+      "experience": [
+      ],
+      "education": [
+        {
+          "label": "2025.08 - 2025.02",
+          "value": "OZ Coding School 부트캠프"
+        }
+      ]
+    }
+  },
+  "en": {
+    "paragraphs": [
+      "During my university years, I was first introduced to Python while building a spoken language corpus and tagging morphemes to analyze linguistic data. Tasks that would have taken a long time to analyze manually were solved almost instantly by setting up a few simple conditions in Python. This experience sparked my deep interest in programming, particularly in handling data and solving problems efficiently. ",
+      "Since then, I have been systematically learning core backend technologies such as databases, APIs, and server architectures through various projects and bootcamps. Beyond problem-solving, these collaborative experiences taught me what ideal “communication” truly means. Working with team members who think differently toward a shared goal expanded my perspective and enabled complementary, organic communication within the team.",
+      "Through these experiences, I also realized the importance of writing clear and understandable code that anyone can follow. Moving forward, my goal is to become a backend developer with skills strong enough that my non-CS background is hardly noticeable, seamlessly integrating into teams and projects to create meaningful services."
+    ],
+    "tabs": {
+      "skills": [
+        {
+          "label": "Programming Languages",
+          "value": "Python"
+        },
+        {
+          "label": "Web Frameworks",
+          "value": "Django, FastAPI, Flask"
+        },
+        {
+          "label": "Web / Client",
+          "value": "HTML, CSS, JavaScript"
+        },
+        {
+          "label": "Database",
+          "value": "MySQL, SQLite, EdgeDB(Gel)"
+        },
+        {
+          "label": "OS / Environment",
+          "value": "Linux, Docker, AWS"
+        },
+        {
+          "label": "Version Control / Collaboration",
+          "value": "Git, Github"
+        },
+        {
+          "label": "Development Tools / IDE",
+          "value": "VSCode, PyCharm"
+        }
+      ],
+      "experience": [
+      ],
+      "education": [
+        {"label": "2025.08 - 2025.02", "value": "OZ Coding School Bootcamp"}
+      ]
+    }
+  }
+}
+

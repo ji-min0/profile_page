@@ -2,83 +2,95 @@
 {% block title %}Contact{% endblock %}
 {% block content %}
 <style>
-  .contact-container { max-width: 1100px; margin: 0 auto; }
-  .form-card, .info-card { border: 1px solid #e9ecef; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,.06); }
-  .form-card { padding: 28px; background: #ffffff; }
-  .info-card { padding: 28px; background: #ffffff; }
-  .contact-title { font-weight: 700; margin-bottom: 18px; }
-  .form-control { background: #f4f7f9; height: 48px; }
-  textarea.form-control { height: 220px; }
-  .contact-note { font-size: 0.9rem; color: #6c757d; }
-  .contact-list .icon {
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #f1f5ff;
-    margin-right: 14px;
-  }
-  .contact-list span,
-  .contact-list a {
-    font-size: 1.05rem;
-  }
-  .btn-primary { padding: 10px 18px; }
+    .contact-left{
+        flex-basis: 35%;
+        line-height: 1.8;
+    }
+    .contact-right{
+        flex-basis: 60%;
+    }
+    .contact-left p {
+    }
+    .contact-left a {
+        margin-top: 20px;
+        margin-right: 10px;
+        text-decoration: none;
+        display: inline-block;
+        color: #433e49;
+        transition: transform 0.5s;
+    }
+
+    .social-icons a:hover{
+        color: #DBC1AD;
+        transform: translateY(-5px);
+    }
+
+    .btn.btn2{
+        display: inline-block;
+        background: #928490;
+        color: #f4f3f2;
+        margin: 50px auto;
+        width: fit-content;
+        border: 1px solid #928490;
+        padding: 14px 50px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.5s, color 0.5s;
+    }
+
+
+    .contact-right form{
+        width: 100%;
+    }
+    form input, form textarea{
+        width: 100%;
+        border: 0;
+        outline: none;
+        background: #F3E8EB80;
+        padding: 15px;
+        margin: 15px 0;
+        color: #433e49;
+        font-size: 18px;
+        border-radius: 6px;
+    }
+
+    form .btn2{
+        padding: 14px 60px;
+        font-size: 18px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
 </style>
 
-<div class="contact-container py-4">
-  <div class="row g-4">
-    <!-- Left: Form -->
-    <div class="col-lg-7">
-      <div class="form-card">
-        <h4 class="contact-title">문의 양식</h4>
-        <!-- 서버 라우트로 POST 전송 -->
-        <form action="/contact" method="post">
-          <div class="mb-3">
-            <label class="form-label">성명</label>
-            <input type="text" name="name" class="form-control" placeholder="성명" required />
-          </div>
-          <div class="mb-3">
-            <label class="form-label">이메일</label>
-            <input type="email" name="email" class="form-control" placeholder="이메일" required />
-          </div>
-          <div class="mb-3">
-            <label class="form-label">주제</label>
-            <input type="text" name="subject" class="form-control" placeholder="주제" />
-          </div>
-          <div class="mb-3">
-            <label class="form-label">메시지</label>
-            <textarea name="message" class="form-control" placeholder="메시지"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">메시지 보내기</button>
-        </form>
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i> k.jimin2002@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen"></i> +82 10-5290-2503</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i>instagram</a>
+                    <a href="https://github.com/ji-min0"><i class="fa-brands fa-github"></i>github</a>
+                    <a href="https://hello-dev-world.tistory.com/"><i class="fa-solid fa-book"></i>tistory</a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+
+            <div class="contact-right">
+                <form action="/contact" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
 
         {% if result %}
         <div class="alert alert-info mt-3">{{ result }}</div>
         {% endif %}
       </div>
     </div>
-    <!-- Right: Info -->
-    <div class="col-lg-5">
-      <div class="info-card h-100">
-        <h4 class="contact-title">연락처</h4>
-        <ul class="list-unstyled contact-list">
-          <li class="mb-3 d-flex align-items-center">
-            <span class="icon"><i class="bi bi-geo-alt"></i></span>
-            <span>대한민국 송도</span>
-          </li>
-          <li class="mb-3 d-flex align-items-center">
-            <span class="icon"><i class="bi bi-envelope"></i></span>
-            <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>
-          </li>
-        </ul>
-        <div class="contact-note mt-3" style="font-size: 0.8rem;">
-          📩 귀하의 메시지는 답변에만 사용되며, 저장하거나 공유하지 않습니다.
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 {% endblock %}
