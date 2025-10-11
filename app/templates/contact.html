@@ -3,11 +3,17 @@
 {% block content %}
 <style>
     .contact-left{
-        flex-basis: 35%;
-        line-height: 1.8;
+        flex-basis: 40%;
+        line-height: 1.5;
+        font-size: 18px;
+        padding-right: 10%;
+        margin: auto 10px;
     }
     .contact-right{
-        flex-basis: 60%;
+        margin-top: 8%;
+        flex-basis: 50%;
+        flex-grow: 0.5;
+        line-height: 1.5;
     }
     .contact-left a {
         margin-top: 20px;
@@ -25,7 +31,7 @@
         display: inline-block;
         background: #928490;
         color: #f4f3f2;
-        margin: 50px auto;
+        margin: 20px auto;
         width: fit-content;
         border: 1px solid #928490;
         padding: 14px 50px;
@@ -36,6 +42,11 @@
     }
     .contact-right form{
         width: 100%;
+    }
+    form p{
+        color: #433e49;
+        font-size: 20px;
+        margin-left: 10px;
     }
     form input, form textarea{
         width: 100%;
@@ -48,12 +59,13 @@
         font-size: 18px;
         border-radius: 6px;
     }
-
-    form .btn2{
+    .btn.btn2.submit{
         padding: 14px 60px;
         font-size: 18px;
-        margin-top: 20px;
         cursor: pointer;
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0 auto;
     }
     .row {
         display: flex;
@@ -65,6 +77,12 @@
         font-size: 60px;
         color: #433e49
     }
+    .alert {
+        margin: 50px auto 0 auto;
+        text-align: center;
+        width: fit-content;
+        font-size: 18px;
+    }
 /*----------------- css for small screens --------------------*/
 @media only screen and (max-width: 600px) {
     .sub-title{
@@ -73,15 +91,19 @@
     .contact-left, .contact-right {
         flex-basis: 100%;
     }
+    form p{
+        font-size: 18px
+    }
 }
 </style>
 
 <div class="contact">
     <div class="container">
-        <br><br>
+        <br><br><br>
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
+                <br>
                 <p><i class="fa-regular fa-envelope"></i> k.jimin2002@gmail.com</p>
 <!--                <p><i class="fa-solid fa-mobile-screen"></i> +82 </p>-->
                 <div class="social-icons">
@@ -93,17 +115,17 @@
             </div>
             <div class="contact-right">
                 <form action="/contact" method="post">
-                    <br><br>
+                    <p><i class="bi bi-envelope-paper-heart"></i> Email me using the form below</p>
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <button type="submit" class="btn btn2 submit">Submit</button>
+                {% if result %}
+                <div class="alert alert-info mt-3">{{ result }}</div>
+                {% endif %}
+                </div>
             </div>
-        {% if result %}
-        <div class="alert alert-info mt-3">{{ result }}</div>
-        {% endif %}
-        </div>
     </div>
 </div>
 {% endblock %}
