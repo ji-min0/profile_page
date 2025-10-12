@@ -47,7 +47,7 @@ async def send_mail(
         msg["Subject"] = subject
         msg["From"] = settings.EMAIL_USER
         msg["To"] = settings.EMAIL_USER
-        msg["Reply-To"] = email # 문의한 사람 이메일로 회신 가능
+        msg["Reply-To"] = email  # 문의한 사람 이메일로 회신 가능
 
         # SMTP 연결 및 메일 전송
         if settings.USE_SSL:
