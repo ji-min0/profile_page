@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    EMAIL_PROVIDER: str = "gmail"  # 기본값 세팅 .env값으로 덮어씌워짐
+    EMAIL_PROVIDER: str
 
     EMAIL_USER: str
     EMAIL_PASS: str

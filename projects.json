@@ -1,17 +1,17 @@
 [
   {
-    "title": "프로젝트1",
-    "desc": "프로젝트1 설명을 구구절절 멋지게 보이도록 적어보자..",
-    "image": "/static/images/work-1.jpg"
+    "title": "Megabox",
+    "desc": "FastAPI 기반의 공지, 휴무신청, 근무교대(대타)신청 및 커뮤니티 기능을 포함한 영화관 내부 운영 관리를 위한 도구입니다.",
+    "image": "/static/images/work-1.png"
   },
     {
-    "title": "프로젝트2",
-    "desc": "프로젝트2 설명을 구구절절 멋지게 보이도록 적어보자..",
-    "image": "/static/images/work-2.jpg"
+    "title": "Near0.5",
+    "desc": "FastAPI, AWS 기반의 EventBridge 상태 웹훅을 포함한 IVS 실시간 스트리밍 서비스입니다.",
+    "image": "/static/images/work-2.png"
   },
     {
-    "title": "프로젝트3",
-    "desc": "프로젝트3 설명을 구구절절 멋지게 보이도록 적어보자..",
-    "image": "/static/images/work-3.png"
+    "title": "통합 교육 플랫폼(LMS)",
+    "desc": "Django 기반의 쪽지시험 배포 및 자동 채점 기능을 포함한 통합 교육 플랫폼(LMS) 입니다.",
+    "image": "/static/images/work-3.jpg"
   }
 ]

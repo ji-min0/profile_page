@@ -21,7 +21,7 @@
         },
         {
           "label": "데이터베이스",
-          "value": "MySQL, SQLite, EdgeDB(Gel)"
+          "value": "MySQL, PostgreSQL, SQLite, EdgeDB(Gel)"
         },
         {
           "label": "운영체제 / 환경",
@@ -33,12 +33,20 @@
         },
         {
           "label": "개발 툴 / IDE",
-          "value": "VSCode, PyCharm"
+          "value": "VSCode, PyCharm, Zed"
         }
       ],
       "experience": [
+        {
+          "label": "2025.11.",
+          "value": "AWS JAM"
+        }
       ],
       "education": [
+        {
+          "label": "2021.03 - 2026.02",
+          "value": "경북대학교 국어국문학과"
+        },
         {
           "label": "2025.08 - 2025.02",
           "value": "OZ Coding School 부트캠프"
@@ -68,7 +76,7 @@
         },
         {
           "label": "Database",
-          "value": "MySQL, SQLite, EdgeDB(Gel)"
+          "value": "MySQL, PostgreSQL, SQLite, EdgeDB(Gel)"
         },
         {
           "label": "OS / Environment",
@@ -80,12 +88,17 @@
         },
         {
           "label": "Development Tools / IDE",
-          "value": "VSCode, PyCharm"
+          "value": "VSCode, PyCharm, Zed"
         }
       ],
       "experience": [
+        {
+          "label": "2025.11.",
+          "value": "AWS JAM"
+        }
       ],
       "education": [
+        {"label": "2021.03 - 2026.02", "value": "Kyungpook National University - Korean Language and Literature"},
         {"label": "2025.08 - 2025.02", "value": "OZ Coding School Bootcamp"}
       ]
     }
