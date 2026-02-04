@@ -6,7 +6,7 @@ authors = [
     {name = "ji-min0",email = "k.jimin2002@gmail.com"}
 ]
 readme = "README.md"
-requires-python = "3.13"
+requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]",
     "orjson",
