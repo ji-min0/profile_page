@@ -16,20 +16,20 @@
           "value": "Django, FastAPI, Flask"
         },
         {
-          "label": "웹/클라이언트",
-          "value": "HTML, CSS, JavaScript"
-        },
-        {
           "label": "데이터베이스",
           "value": "MySQL, PostgreSQL, SQLite, EdgeDB(Gel)"
         },
         {
           "label": "운영체제 / 환경",
-          "value": "Linux, Docker, AWS"
+          "value": "Docker, AWS, Linux"
         },
         {
           "label": "버전 관리 / 협업",
-          "value": "Git, Github"
+          "value": "Git, Github, Jira"
+        },
+        {
+          "label": "웹/클라이언트",
+          "value": "HTML, CSS, JavaScript"
         },
         {
           "label": "개발 툴 / IDE",
@@ -38,6 +38,14 @@
       ],
       "experience": [
         {
+          "label": "2021.11.",
+          "value": "AI 기반 앱 개발 교육과정"
+        },
+        {
+          "label": "2023.01 - 2024.03",
+          "value": "대학교 학생 홍보대사"
+        },
+        {
           "label": "2025.11.",
           "value": "AWS JAM"
         }
@@ -45,11 +53,11 @@
       "education": [
         {
           "label": "2021.03 - 2026.02",
-          "value": "경북대학교 국어국문학과"
+          "value": "경북대학교 국어국문학과 졸업"
         },
         {
           "label": "2025.08 - 2025.02",
-          "value": "OZ Coding School 부트캠프"
+          "value": "Python 웹 개발 국비(KDT) 과정 수료"
         }
       ]
     }
@@ -71,20 +79,20 @@
           "value": "Django, FastAPI, Flask"
         },
         {
-          "label": "Web / Client",
-          "value": "HTML, CSS, JavaScript"
-        },
-        {
           "label": "Database",
           "value": "MySQL, PostgreSQL, SQLite, EdgeDB(Gel)"
         },
         {
           "label": "OS / Environment",
-          "value": "Linux, Docker, AWS"
+          "value": "Docker, AWS, Linux"
         },
         {
           "label": "Version Control / Collaboration",
-          "value": "Git, Github"
+          "value": "Git, Github, Jira"
+        },
+        {
+          "label": "Web / Client",
+          "value": "HTML, CSS, JavaScript"
         },
         {
           "label": "Development Tools / IDE",
@@ -93,13 +101,21 @@
       ],
       "experience": [
         {
+          "label": "2021.11.",
+          "value": "AI-Based Application Development Program"
+        },
+        {
+          "label": "2023.01 - 2024.03",
+          "value": "University Student Ambassador"
+        },
+        {
           "label": "2025.11.",
           "value": "AWS JAM"
         }
       ],
       "education": [
-        {"label": "2021.03 - 2026.02", "value": "Kyungpook National University - Korean Language and Literature"},
-        {"label": "2025.08 - 2025.02", "value": "OZ Coding School Bootcamp"}
+        {"label": "2021.03 - 2026.02", "value": "Major: Korean Language and Literature"},
+        {"label": "2025.08 - 2025.02", "value": "Government-Funded (KDT) Python Web Development Course"}
       ]
     }
   }
