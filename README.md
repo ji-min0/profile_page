@@ -3,10 +3,6 @@
 ### 1. 프로젝트 구조
 ```
 .
-├── .github/                 # github Action용 ci 파일 생성
-│   └── workflows
-│      └── ci.yml
-│
 ├── app/
 │   ├── __init__.py
 │   ├── core/
@@ -46,10 +42,6 @@
 ├── projects.json               # 프로젝트 목록 json으로 관리 -> html을 동적으로
 ├── about.json                  # 한/영 내용 json으로 관리 -> html을 동적으로
 ├── run.sh                      # 개발용(로컬에서 확인)
-├── test/
-│   ├── temp.py
-│   ├── test.sh                 # black, ruff, mypy, coverage 확인
-│   └── test_temp.py
 │
 └── vercel.json
 ```
@@ -62,10 +54,7 @@
 * Github Action 사용
 * shell script 사용
   1) run.sh: 개발용 (로컬에서 페이지 확인)
-  2) test/test.sh: 개발용 (black, ruff, mypy, coverage 확인으로 개발 용이)
-* poetry로 의존성 관리
-  * 이때, 기존 사용하던 1.8.5에서 2.2.1로 버전 변경함
-* python 3.12 사용
+* python 3.13 사용
 * orjson을 사용해 json보다 속도 향상
   * import json -> import orjson
   * json.load(f) -> orjson.loads(f.read())
@@ -77,7 +66,3 @@
 * 작은 화면에 대응하는 css 추가
 
 <hr>
-
-### 하면서 느낀점
-* test.sh을 깃허브 커밋 전에 꼭!!! 돌려보기
-  * 프로젝트 깃허브 올리고, 깃허브액션 x 뜨면 그제서야 돌렸다...(바보같아)

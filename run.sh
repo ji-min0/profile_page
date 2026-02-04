@@ -1,2 +1,2 @@
 echo "Starting FastAPI server"
-poetry run uvicorn app.main:app --reload
+poetry run fastapi run app/main.py --reload
