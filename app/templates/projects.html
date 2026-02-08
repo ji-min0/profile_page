@@ -89,6 +89,41 @@
         background: #928490;
         color: #f4f3f2;
     }
+    .modal{
+    display:none;
+    position:fixed;
+    z-index:999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+.modal-content{
+    background:#fff;
+    margin:8% auto;
+    padding:30px;
+    width:60%;
+    max-width:700px;
+    border-radius:10px;
+    position:relative;
+}
+
+.modal-content img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:28px;
+    cursor:pointer;
+}
+
 /*----------------- css for small screens --------------------*/
 @media only screen and (max-width: 600px) {
     .sub-title {
@@ -101,13 +136,13 @@
         <h1 class="sub-title">My Projects</h1><br>
         <div class="work-list">
             {% for project in projects %}
-            <div class="work">
+            <div class="work" data-id="{{ project.id }}">
                 <img src="{{ project.image }}" alt="{{ project.title }}">
                 <div class="layer">
-                    <h3>{{ project.title }}</h3>
+                    <h3><b>{{ project.title }}</b></h3>
                     <p>{{ project.desc }}</p>
                     <!-- 프로젝트 만들면 깃허브 레포 주소 넣을 예정-->
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+{#                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>#}
                 </div>
             </div>
             {% endfor %}
@@ -115,4 +150,49 @@
         <a href="https://github.com/ji-min0" class="btn btn1">See more<i class="fa-brands fa-github"></i></a>
     </div>
 </div>
+<!-- modal -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImg">
+      <h2 id="modalTitle"></h2>
+      <div id="modalDetail" style="margin: 15px 0; color: #666;">
+          <p id="modalStack"></p>
+          <p id="modalRole"></p>
+      </div>
+      <p id="modalDesc"></p>
+  </div>
+</div>
+{% endblock %}
+{% block script %}
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+    // 서버의 리스트 데이터를 JS 객체(Map)로 변환
+    const projectsRaw = {{ projects | tojson }};
+    const projectData = {};
+    projectsRaw.forEach(p => { projectData[p.id] = p; });
+
+    const modal = document.getElementById("projectModal");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".work").forEach(card => {
+        card.addEventListener("click", () => {
+            const id = card.dataset.id;
+            const p = projectData[id];
+            if (!p) return;
+
+            document.getElementById("modalImg").src = p.detail_image;
+            document.getElementById("modalTitle").textContent = p.title;
+            document.getElementById("modalStack").innerHTML = `<b>Stack:</b> ${p.stack}`;
+            document.getElementById("modalRole").innerHTML = `<b>Role:</b> ${p.role}`;
+            document.getElementById("modalDesc").textContent = p.full_desc || p.desc;
+
+            modal.style.display = "block";
+        });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = e => { if (e.target === modal) modal.style.display = "none"; }
+});
+</script>
 {% endblock %}
