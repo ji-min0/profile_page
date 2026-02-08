@@ -1,17 +1,44 @@
 [
   {
+    "id": "megabox",
     "title": "Megabox 내부 운영 서비스",
     "desc": "FastAPI 기반의 공지, 휴무신청, 근무교대(대타)신청 및 커뮤니티 기능을 포함한 영화관 내부 운영 관리를 위한 도구입니다.",
-    "image": "/static/images/work-1.png"
+    "image": "/static/images/work-1.png",
+    "detail_image": "/static/images/megabox_detail.png",
+    "role": "프로젝트 기획, 백엔드 API 설계 및 커뮤니티 기능 구현",
+    "framework": "FastAPI",
+    "database": "MySQL(PyMySQL) + SQLAlchemy + Alembic",
+    "cloud_infra": "-",
+    "tools": ["Pydantic", " Uvicorn", " PyJWT", " passlib", " httpx", " Jinja2"],
+    "full_desc": [
+      "공지, 휴무신청, 근무교대(대타)신청 및 커뮤니티 기능을 포함한 영화관 내부 운영 관리를 위한 도구입니다.",
+      ""
+      ]
   },
     {
+    "id": "near0",
     "title": "Near0.5 스트리밍 서비스",
-    "desc": "FastAPI, AWS 기반의 EventBridge 상태 웹훅을 포함한 IVS 실시간 스트리밍 서비스입니다.",
-    "image": "/static/images/work-2.png"
+    "desc": "FastAPI 기반의 IVS 실시간 스트리밍 서비스입니다. AWS EventBridge 상태 웹훅을 포함합니다.",
+    "image": "/static/images/work-2.png",
+    "detail_image": "/static/images/stream.png",
+    "framework": "FastAPI",
+    "database": "PostgreSQL(asyncpg) + TortoiseORM + Aerich",
+    "cloud_infra": "AWS IVS, EC2, ECR, Cognito, S3, EventBridge, CloudFront(CDN)",
+    "role": "스트리밍 기능 + AWS 관리",
+    "tools": ["Celery", " Redis", " Boto3(aioboto3)", " Pydantic", " PyJWT", " bcrypt", " httpx", " FastAdmin"],
+    "full_desc": "실시간 스트리밍 상태를 동기화하는 백엔드 아키텍처 구축..."
   },
     {
+    "id": "lms",
     "title": "통합 교육 플랫폼(LMS)",
-    "desc": "Django 기반의 쪽지시험 배포 및 자동 채점 기능을 포함한 통합 교육 플랫폼(LMS) 입니다.",
-    "image": "/static/images/work-3.jpg"
+    "desc": "Django 기반의 쪽지시험 배포 및 자동 채점 기능을 포함한 통합 교육 플랫폼(LMS) 입니다. 수강생의 학습 점검과 어드민의 시험 생성·배포·관리를 목적으로 합니다.",
+    "image": "/static/images/work-3.jpg",
+    "detail_image": "/static/images/work-3.jpg",
+    "framework": "Django, Django REST Framework, Django Channels",
+    "database": "PostgreSQL(psycopg2) + DjangoORM",
+    "cloud_infra": "AWS IVS, EC2, ECR, Cognito, S3, EventBridge, CloudFront(CDN)",
+    "role": "쪽지시험 기능 팀장, 쪽지시험 배포 & 자동 채점 기능",
+    "tools": ["Redis, Celery, django-celery-beat, boto3(AWS S3), djangorestframework-simplejwt, django-cors-headers, Twilio, Sentry SDK, Gunicorn, Uvicorn"],
+    "full_desc": "실시간 스트리밍 상태를 동기화하는 백엔드 아키텍처 구축..."
   }
 ]
