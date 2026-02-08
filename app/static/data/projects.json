@@ -1,11 +1,11 @@
 [
   {
-    "title": "Megabox",
+    "title": "Megabox 내부 운영 서비스",
     "desc": "FastAPI 기반의 공지, 휴무신청, 근무교대(대타)신청 및 커뮤니티 기능을 포함한 영화관 내부 운영 관리를 위한 도구입니다.",
     "image": "/static/images/work-1.png"
   },
     {
-    "title": "Near0.5",
+    "title": "Near0.5 스트리밍 서비스",
     "desc": "FastAPI, AWS 기반의 EventBridge 상태 웹훅을 포함한 IVS 실시간 스트리밍 서비스입니다.",
     "image": "/static/images/work-2.png"
   },

@@ -18,14 +18,11 @@ templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 # ===== Contact Form (GET) =====
 @router.get("/contact", response_class=HTMLResponse)
 async def contact_form(request: Request) -> HTMLResponse:
-    with open(BASE_DIR.parent / "projects.json", "rb") as f:
-        projects = orjson.loads(f.read())
 
     return templates.TemplateResponse(
         "contact.html",
         {
             "request": request,
-            "projects": projects,
             "contact_email": settings.CONTACT_EMAIL,
         },
     )
