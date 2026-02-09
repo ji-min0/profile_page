@@ -37,7 +37,7 @@
     "detail_image": "/static/images/work-3.jpg",
     "framework": "Django, Django REST Framework, Django Channels",
     "database": "PostgreSQL(psycopg2) + DjangoORM",
-    "cloud_infra": "AWS IVS, EC2, ECR, Cognito, S3, EventBridge, CloudFront(CDN)",
+    "cloud_infra": "EC2, S3",
     "role": "쪽지시험 기능 팀장, 쪽지시험 배포 & 자동 채점 기능",
     "tools": ["Redis, Celery, django-celery-beat, boto3(AWS S3), djangorestframework-simplejwt, django-cors-headers, Twilio, Sentry SDK, Gunicorn, Uvicorn"],
     "full_desc": "실시간 스트리밍 상태를 동기화하는 백엔드 아키텍처 구축..."
