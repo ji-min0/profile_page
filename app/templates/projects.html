@@ -163,7 +163,7 @@
         <p id="modalLib" style="margin-bottom: 8px"></p>
         <p id="modalRole" style="margin-bottom: 8px"></p>
       </div>
-      <p id="modalDesc"></p>
+      <p id="modalDesc" style="margin-top: 4px"></p>
   </div>
 </div>
 {% endblock %}
@@ -191,8 +191,22 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("modalDatabase").innerHTML = `<b>Database:</b> ${p.database}`;
             document.getElementById("modalInfra").innerHTML = `<b>Cloud Infrastructure:</b> ${p.cloud_infra}`;
             document.getElementById("modalLib").innerHTML = `<b>Libraries:</b> ${p.tools}`;
-            document.getElementById("modalDesc").textContent = p.full_desc || p.desc;
-
+            {#const descElement = document.getElementById("modalDesc");#}
+            {#descElement.innerHTML = ""; // 이전 내용 초기화 (div 내부를 비움)#}
+            {##}
+            {#if (Array.isArray(p.full_desc)) {#}
+            {#    // 1. 배열인 경우 (Megabox) -> 각 문장을 <p>로 감싸서 추가#}
+            {#    p.full_desc.forEach(text => {#}
+            {#        const pTag = document.createElement("p");#}
+            {#        pTag.textContent = text;#}
+            {#        pTag.style.marginBottom = "15px"; // 문단 사이 간격#}
+            {#        descElement.appendChild(pTag);#}
+            {#    });}#}
+            {#else {#}
+            {#    // 2. 문자열인 경우 (Near0, LMS) -> 하나의 <p>로 처리#}
+            {#    const pTag = document.createElement("p");#}
+            {#    pTag.textContent = p.full_desc || p.desc;#}
+            {#    descElement.appendChild(pTag);}#}
             modal.style.display = "block";
         });
     });
