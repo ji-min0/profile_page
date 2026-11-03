@@ -12,6 +12,7 @@
   --line: #e4dfdc;
   --radius: 10px;
   --max: 1120px;
+  --gutter: clamp(20px, 5vw, 56px);
 }
 
 * {
@@ -46,9 +47,9 @@ img {
 
 .container {
   width: 100%;
-  max-width: var(--max);
+  max-width: calc(var(--max) + 2 * var(--gutter));
   margin: 0 auto;
-  padding: 0 24px;
+  padding-inline: var(--gutter);
 }
 
 .sub-title {
@@ -59,7 +60,7 @@ img {
 }
 
 .section {
-  padding: 72px 0;
+  padding-block: 72px;
 }
 
 .eyebrow {
@@ -210,7 +211,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 0 80px;
+  padding-block: 40px 80px;
 }
 
 .hero-role {
@@ -948,14 +949,14 @@ img {
 }
 
 @media (max-width: 640px) {
-  .container {
-    padding: 0 16px;
+  :root {
+    --gutter: 16px;
   }
   .sub-title {
     font-size: 38px;
   }
   .section {
-    padding: 48px 0;
+    padding-block: 48px;
   }
   .menu-btn {
     display: block;
