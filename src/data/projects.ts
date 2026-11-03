@@ -108,6 +108,64 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "megabox",
+    title: "영화관 직원 관리 시스템",
+    subtitle: "스케줄 · 급여 · 출퇴근 · 커뮤니티",
+    summary:
+      "메가박스 지점 직원의 스케줄, 급여 계산, 키오스크 출퇴근, 교대·휴무 신청, 커뮤니티를 한 플랫폼에서 관리하는 풀스택 서비스입니다. 다른 지점에서 직접 근무한 경험을 바탕으로 기획했습니다.",
+    image: "/images/work-1.png",
+    detailImages: [{ src: "/images/megabox_detail.png", caption: "서비스 화면" }],
+    diagrams: [],
+    period: "2025.10 – 2026.02 (원본 백엔드 레포 기준)",
+    team: "7인 (BE 4 · FE 3)",
+    role: "서비스 기획(페이지별 기능·URL·권한 명세), DB 설계(ERD), 커뮤니티 게시판 개발",
+    stack: [
+      { label: "Framework", value: "FastAPI (팀 프론트엔드: React 19)" },
+      { label: "Database", value: "MySQL + SQLAlchemy + Alembic, Redis" },
+      { label: "Infra", value: "Docker, Nginx, Cloudflare Tunnel" },
+      { label: "Libraries", value: "Pydantic, PyJWT, isort, black, flake8" },
+    ],
+    stats: [
+      { value: "11/13", label: "ERD 테이블 실제 구현 반영" },
+      { value: "17/27", label: "커뮤니티 모듈 커밋 (최다)" },
+      { value: "35개", label: "이후 확장된 테이블 규모" },
+    ],
+    highlights: [
+      {
+        title: "법정 휴게시간을 퇴근 조건으로",
+        body:
+          "근로기준법상 근무시간에 따라 휴게시간(4시간 미만 없음, 4~8시간 30분, 8시간 이상 60분)을 보장해야 합니다. 놓친 뒤에 바로잡는 대신 처음부터 놓칠 수 없도록, 휴게시간을 채우지 않으면 퇴근할 수 없게 시스템에서 선제적으로 막았습니다. 이를 위해 출근·휴식·복귀·퇴근 4단계를 흐름도로 정의했습니다.",
+      },
+      {
+        title: "바쁜 날의 휴식 누락을 예외 처리로",
+        body:
+          "천만 영화 개봉처럼 바쁜 날에는 휴식 자체를 잊어 동료가 챙겨줘야 쉬러 가는 경우가 있었고, 이때 휴식 버튼도 자주 빠뜨렸습니다. 근무하던 지점의 기존 시스템은 휴식을 눌러야만 복귀를 누를 수 있어서, 쉬고 돌아온 뒤에 휴식을 누르고 시간을 잰 다음 다시 복귀를 눌러야 했습니다. 그래서 휴식 없이 복귀만 눌러도 휴식 30분이 자동 입력되도록 정했고, 같은 맥락에서 하루 두 번 출근도 막았습니다.",
+      },
+      {
+        title: "교대·휴무 신청을 결재 흐름으로",
+        body:
+          "기존에는 직원끼리 개인적으로 연락해 합의한 뒤 바이저를 찾아가 변경해야 했습니다. 부탁하거나 거절할 때 서로 눈치가 보이고, 변경이 잦으면 바이저에게도 눈치가 보이는 구조였습니다. 그래서 사람 사이의 부탁을 시스템 안의 신청으로 옮겼습니다. 신청은 커뮤니티에 자동 게시되고 대기/승인/반려 상태와 승인자를 두며, 승인은 바이저 이상만 할 수 있도록 권한을 나눴습니다. 승인된 교대·대타는 스케줄에 자동 반영되고, 승인된 휴무일은 스케줄 등록 시 자동으로 막힙니다.",
+      },
+      {
+        title: "급여 계산 구조",
+        body:
+          "직원별 시급 이력, 연도별 최저시급, 시행일 기준 4대보험 요율, 법정 공휴일을 테이블로 분리하고, 주간·야간·주휴·연차·공휴일 수당과 공제·실지급액까지 담는 구조로 설계했습니다. 주민번호 암호화 권장안은 실제 구현에서 Fernet 암호화로 반영됐습니다.",
+      },
+    ],
+    extras: [
+      "커뮤니티 테이블 설계·생성, 교대·휴무 신청과 게시글의 관계를 FK에서 ORM 조인으로 변경",
+      "커뮤니티 API와 직급별 권한 관리, 댓글 cascade, 게시글·댓글 페이지네이션, 댓글 좋아요, 카테고리별 게시글 수 API",
+      "created_at·updated_at 공통 Mixin 분리, KST 타임스탬프 기본값 오류 수정",
+      "수정 후 응답에 댓글·작성자 관계가 갱신되지 않던 문제를 joinedload와 세션 만료 처리로 해결해 프론트가 수정 내용을 즉시 확인하게 함",
+      "Alembic 마이그레이션과 isort·black·flake8 도입, CI 의존성 캐싱",
+      "ERD 13개 테이블 중 11개가 실제 구현으로 이어졌고, 서비스는 이후 35개 테이블 규모로 확장",
+    ],
+    links: [
+      { label: "GitHub", url: "https://github.com/mbcwsystem/backend" },
+      { label: "기획서", url: "https://app.notion.com/p/40d78eb6842380aa87a6ec4ec9efae30?source=copy_link" },
+    ],
+  },
+  {
     id: "near0",
     title: "Near0.5",
     subtitle: "실시간 콘서트 스트리밍",
@@ -266,64 +324,6 @@ export const projects: Project[] = [
       { label: "요구사항 정의서", url: "https://docs.google.com/spreadsheets/d/1xh37kqLOCXluecUXcNhFOMQnIhjjHsVNhvJnOx3gZEQ/edit?gid=0#gid=0" },
       { label: "API 명세서", url: "https://docs.google.com/spreadsheets/d/1JdQcyU0pfKxXxRBBy0xXr_kDt9bC29LJun_gNQLP-DQ/edit?gid=0#gid=0" },
       { label: "테이블 명세서", url: "https://docs.google.com/spreadsheets/d/17r_O8EUqZDt9MoFmFTKgpXHLAKRh2Bsvx4cvIXjWmpM/edit?gid=684962824#gid=684962824" },
-    ],
-  },
-  {
-    id: "megabox",
-    title: "영화관 직원 관리 시스템",
-    subtitle: "스케줄 · 급여 · 출퇴근 · 커뮤니티",
-    summary:
-      "메가박스 지점 직원의 스케줄, 급여 계산, 키오스크 출퇴근, 교대·휴무 신청, 커뮤니티를 한 플랫폼에서 관리하는 풀스택 서비스입니다. 다른 지점에서 직접 근무한 경험을 바탕으로 기획했습니다.",
-    image: "/images/work-1.png",
-    detailImages: [{ src: "/images/megabox_detail.png", caption: "서비스 화면" }],
-    diagrams: [],
-    period: "2025.10 – 2026.02 (원본 백엔드 레포 기준)",
-    team: "7인 (BE 4 · FE 3)",
-    role: "서비스 기획(페이지별 기능·URL·권한 명세), DB 설계(ERD), 커뮤니티 게시판 개발",
-    stack: [
-      { label: "Framework", value: "FastAPI (팀 프론트엔드: React 19)" },
-      { label: "Database", value: "MySQL + SQLAlchemy + Alembic, Redis" },
-      { label: "Infra", value: "Docker, Nginx, Cloudflare Tunnel" },
-      { label: "Libraries", value: "Pydantic, PyJWT, isort, black, flake8" },
-    ],
-    stats: [
-      { value: "11/13", label: "ERD 테이블 실제 구현 반영" },
-      { value: "17/27", label: "커뮤니티 모듈 커밋 (최다)" },
-      { value: "35개", label: "이후 확장된 테이블 규모" },
-    ],
-    highlights: [
-      {
-        title: "법정 휴게시간을 퇴근 조건으로",
-        body:
-          "근로기준법상 근무시간에 따라 휴게시간(4시간 미만 없음, 4~8시간 30분, 8시간 이상 60분)을 보장해야 합니다. 놓친 뒤에 바로잡는 대신 처음부터 놓칠 수 없도록, 휴게시간을 채우지 않으면 퇴근할 수 없게 시스템에서 선제적으로 막았습니다. 이를 위해 출근·휴식·복귀·퇴근 4단계를 흐름도로 정의했습니다.",
-      },
-      {
-        title: "바쁜 날의 휴식 누락을 예외 처리로",
-        body:
-          "천만 영화 개봉처럼 바쁜 날에는 휴식 자체를 잊어 동료가 챙겨줘야 쉬러 가는 경우가 있었고, 이때 휴식 버튼도 자주 빠뜨렸습니다. 근무하던 지점의 기존 시스템은 휴식을 눌러야만 복귀를 누를 수 있어서, 쉬고 돌아온 뒤에 휴식을 누르고 시간을 잰 다음 다시 복귀를 눌러야 했습니다. 그래서 휴식 없이 복귀만 눌러도 휴식 30분이 자동 입력되도록 정했고, 같은 맥락에서 하루 두 번 출근도 막았습니다.",
-      },
-      {
-        title: "교대·휴무 신청을 결재 흐름으로",
-        body:
-          "기존에는 직원끼리 개인적으로 연락해 합의한 뒤 바이저를 찾아가 변경해야 했습니다. 부탁하거나 거절할 때 서로 눈치가 보이고, 변경이 잦으면 바이저에게도 눈치가 보이는 구조였습니다. 그래서 사람 사이의 부탁을 시스템 안의 신청으로 옮겼습니다. 신청은 커뮤니티에 자동 게시되고 대기/승인/반려 상태와 승인자를 두며, 승인은 바이저 이상만 할 수 있도록 권한을 나눴습니다. 승인된 교대·대타는 스케줄에 자동 반영되고, 승인된 휴무일은 스케줄 등록 시 자동으로 막힙니다.",
-      },
-      {
-        title: "급여 계산 구조",
-        body:
-          "직원별 시급 이력, 연도별 최저시급, 시행일 기준 4대보험 요율, 법정 공휴일을 테이블로 분리하고, 주간·야간·주휴·연차·공휴일 수당과 공제·실지급액까지 담는 구조로 설계했습니다. 주민번호 암호화 권장안은 실제 구현에서 Fernet 암호화로 반영됐습니다.",
-      },
-    ],
-    extras: [
-      "커뮤니티 테이블 설계·생성, 교대·휴무 신청과 게시글의 관계를 FK에서 ORM 조인으로 변경",
-      "커뮤니티 API와 직급별 권한 관리, 댓글 cascade, 게시글·댓글 페이지네이션, 댓글 좋아요, 카테고리별 게시글 수 API",
-      "created_at·updated_at 공통 Mixin 분리, KST 타임스탬프 기본값 오류 수정",
-      "수정 후 응답에 댓글·작성자 관계가 갱신되지 않던 문제를 joinedload와 세션 만료 처리로 해결해 프론트가 수정 내용을 즉시 확인하게 함",
-      "Alembic 마이그레이션과 isort·black·flake8 도입, CI 의존성 캐싱",
-      "ERD 13개 테이블 중 11개가 실제 구현으로 이어졌고, 서비스는 이후 35개 테이블 규모로 확장",
-    ],
-    links: [
-      { label: "GitHub", url: "https://github.com/mbcwsystem/backend" },
-      { label: "기획서", url: "https://app.notion.com/p/40d78eb6842380aa87a6ec4ec9efae30?source=copy_link" },
     ],
   },
 ];
