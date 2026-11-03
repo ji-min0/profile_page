@@ -110,7 +110,6 @@ export const projects: Project[] = [
     image: "/images/work-2.png",
     detailImages: [
       { src: "/images/stream.png", caption: "시청 화면 — 라이브 재생과 실시간 채팅" },
-      { src: "/images/monitor.png", caption: "송출 모니터링 페이지 — FE가 실제 방송 없이 연동을 테스트하도록 제작" },
     ],
     diagrams: [
       {
