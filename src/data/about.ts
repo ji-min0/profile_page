@@ -5,9 +5,9 @@ export type AboutLang = { paragraphs: string[]; tabs: { skills: TabItem[]; exper
 export const about: { kr: AboutLang; en: AboutLang } = {
   "kr": {
     "paragraphs": [
-      "기획부터 API 명세, AWS 인프라까지 직접 다뤄본, 개발을 아는 PM을 지향합니다. 구현에 앞서 요구사항을 면밀히 분석하고 흐름을 설계하는 과정을 가장 중요하게 생각합니다. 게임 추천 서비스 게추에서는 FE·BE가 동시에 출발할 수 있도록 API 명세 57건을 먼저 확정해 팀이 명세만 보고 병렬로 개발하게 했고, 영화관 직원 관리 시스템에서는 현장 근무 경험을 휴게시간·권한·결재 흐름 같은 정책과 데이터 구조로 옮겼습니다. 잘 잡힌 설계는 팀 전체의 판단 기준이 되어 불필요한 소모를 막는다고 믿습니다.",
-      "문제가 생기면 기다리기보다 해결 가능한 단위로 나눠 먼저 움직입니다. 외부 게임 데이터 API가 막혔을 때는 키 재발급을 기다리지 않고 스키마 변경 없이 다른 API로 전환했고, 스트리밍 서비스에서는 서버가 방송 상태를 모르는 문제를 EventBridge 웹훅으로 풀었습니다. 코드 리뷰에서는 보안 취약점과 경쟁 조건을 먼저 찾아 짚었고, AI 리뷰 봇의 제안도 사실을 확인한 뒤에 수용하거나 반박했습니다.",
-      "국어국문학을 전공하며 글로 생각을 정리하고, 학생홍보대사로 100명 이상 앞에서 발표해왔습니다. 이 경험을 바탕으로 개발 내용을 다른 직군이 이해할 수 있는 언어로 옮기는 사람이 되고자 합니다. 지금은 코디세이 AI 올인원 과정에서 LangGraph·RAG 같은 AI 기술을 익히며 배움의 공백을 계속 메우고 있습니다."
+      "저는 일이 시작되기 전에 무엇을, 어떤 기준으로 만들지를 먼저 정하는 사람입니다. 기준이 없으면 같은 기능을 두고도 사람마다 다른 그림을 그리고, 그 차이는 결국 일정 지연과 재작업으로 돌아옵니다. 그래서 요구사항과 정책, 예외 상황을 문서로 먼저 맞추고, 그 문서가 팀이 판단할 때 기대는 기준이 되도록 만드는 데 시간을 씁니다.",
+      "기획만 하는 사람이 되고 싶지는 않았습니다. 백엔드를 직접 개발하고 AWS로 서비스를 배포해 보면서, 기획서의 한 줄이 개발에서는 얼마나 큰 일이 되는지, 개발자가 어디서 막히는지를 알게 됐습니다. 그래서 진행이 막히면 기다리기보다 문제를 나눠 먼저 움직이고, 되는 것과 어려운 것을 개발자와 같은 언어로 이야기하려 합니다.",
+      "국어국문학을 전공하며 생각을 글로 정리하는 법을 배웠고, 학생홍보대사로 100명 넘는 사람들 앞에서 설명해 왔습니다. 서로 다른 언어를 쓰는 사람들 사이에서 내용을 정확하게 옮기는 일이 제가 가장 잘할 수 있는 일이라고 생각합니다. 지금은 코디세이에서 AI를 공부하며, 새로운 도구를 실무에 맞게 쓰되 결과는 직접 확인하고 설명하는 습관을 기르고 있습니다."
     ],
     "tabs": {
       "skills": [
@@ -80,9 +80,9 @@ export const about: { kr: AboutLang; en: AboutLang } = {
   },
   "en": {
     "paragraphs": [
-      "I aim to be a PM who understands development, having worked hands-on from planning and API specifications to AWS infrastructure. I prioritize analyzing requirements and designing the overall flow before implementation. On Gechu, a game recommendation service, I finalized 57 API specifications up front so frontend and backend could develop in parallel. On a cinema staff management system, I turned my own on-site work experience into policies and data structures for break times, permissions, and approval flows.",
-      "When problems arise, I break them into solvable units and act rather than wait. When an external game data API failed, I switched to another API without changing the schema instead of waiting for a new key. On a streaming service, I solved the server's inability to track broadcast state with EventBridge webhooks. In code reviews I look for security flaws and race conditions first, and I verify AI review suggestions before accepting or rejecting them.",
-      "Majoring in Korean Language and Literature taught me to organize ideas in writing, and as a student ambassador I presented to audiences of over 100 people. I want to translate technical work into language other roles can understand. I am currently studying AI technologies such as LangGraph and RAG in the Codyssey AI program."
+      "I am someone who decides what to build, and by what standard, before the work begins. Without a shared standard, people picture the same feature differently, and that gap eventually comes back as delays and rework. So I spend time aligning requirements, policies, and edge cases in writing first, and making those documents the reference the team relies on when making decisions.",
+      "I never wanted to be someone who only plans. By building backends myself and deploying services on AWS, I learned how much work a single line in a spec can become, and where developers get stuck. When progress stalls, I break the problem down and move first instead of waiting, and I try to talk about what is feasible and what is hard in the same language developers use.",
+      "Studying Korean Language and Literature taught me to organize my thinking in writing, and as a student ambassador I explained things to audiences of over 100 people. I believe my greatest strength is carrying meaning accurately between people who speak different professional languages. I am currently studying AI at Codyssey, building the habit of using new tools practically while verifying and explaining their results myself."
     ],
     "tabs": {
       "skills": [
