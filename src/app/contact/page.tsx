@@ -20,8 +20,8 @@ export default function ContactPage() {
               <FaGithub /> github
             </a>
           </div>
-          <a href="/images/my-cv.pdf" download className="btn btn-fill">
-            Download CV
+          <a href="/images/my-cv.pdf" download="강지민_이력서.pdf" className="btn btn-fill">
+            Download Résumé
           </a>
         </div>
         <div className="contact-right">
