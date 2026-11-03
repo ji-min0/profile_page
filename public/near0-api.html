@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Near0.5 API 명세 | Jimin</title>
+<link rel="stylesheet" href="/vendor/swagger-ui/swagger-ui.css">
+<style>
+  body { margin: 0; background: #fafafa; }
+  .topbar-note {
+    display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between;
+    padding: 12px 20px; background: #433e49; color: #f4f3f2;
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  }
+  .topbar-note a { color: #f4f3f2; text-decoration: none; font-weight: 600; }
+  .topbar-note a:hover { text-decoration: underline; }
+  .topbar-note span { color: #dbc1ad; }
+</style>
+</head>
+<body>
+<div class="topbar-note">
+  <a href="/projects/near0">← Near0.5 프로젝트로 돌아가기</a>
+  <span>개발 당시 Swagger 문서의 정적 사본 · 요청 실행 불가</span>
+</div>
+<div id="swagger-ui"></div>
+<script src="/vendor/swagger-ui/swagger-ui-bundle.js"></script>
+<script>
+  window.ui = SwaggerUIBundle({
+    url: "/specs/near0-openapi.json",
+    dom_id: "#swagger-ui",
+    deepLinking: true,
+    docExpansion: "list",
+    defaultModelsExpandDepth: 0,
+    supportedSubmitMethods: []
+  });
+</script>
+</body>
+</html>

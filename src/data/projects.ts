@@ -246,6 +246,7 @@ export const projects: Project[] = [
     ],
     links: [
       { label: "GitHub", url: "https://github.com/Near-0-5/backend/tree/develop" },
+      { label: "API 명세서", url: "/near0-api.html" },
       { label: "ERD", url: "https://dbdiagram.io/d/Copy-of-Untitled-Diagram-6971c92ebd82f5fce23ec02d" },
       { label: "요구사항 정의서", url: "https://docs.google.com/spreadsheets/d/1Y07EfEfA7vvZu01o8cDpFd_HZBZDjZpZFykCiF2wXfs/edit?gid=0#gid=0" },
     ],
