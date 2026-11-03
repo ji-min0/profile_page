@@ -31,7 +31,7 @@ export const projects: Project[] = [
     imagePosition: "center top",
     detailImages: [{ src: "/images/gechu.png", caption: "추천 게임 화면 — 취향 기반 추천" }],
     period: "2026.02.19 – 2026.03.26",
-    team: "7인 (FE 3 · BE 3 · 러닝헬퍼 1)",
+    team: "7인 (BE 4 · FE 3)",
     role: "러닝헬퍼(OZ 코딩스쿨 2개월 계약) — 기획 전체 정리, API 명세 작성, DB 설계, 초기 인프라, 코드 작성과 PR 리뷰",
     stack: [
       { label: "Framework", value: "Django 6, Django REST Framework" },
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     highlights: [
       {
         title: "기획·명세 선확정",
-        body: "FE 3인과 BE 3인이 동시에 시작해 서로 기다리면 일정이 밀리는 상황이었습니다. 개발보다 기준 문서를 먼저 확정하기로 하고 명세 57건에 중요도·개발 여부·담당자·정책 메모까지 정의해, 프론트엔드가 명세만 보고 병렬로 개발하게 했습니다. PR 템플릿에 \"프론트는 Swagger만 보고 작업한다\"는 원칙도 명문화했습니다.",
+        body: "BE 4인과 FE 3인이 동시에 시작해 서로 기다리면 일정이 밀리는 상황이었습니다. 개발보다 기준 문서를 먼저 확정하기로 하고 명세 57건에 중요도·개발 여부·담당자·정책 메모까지 정의해, 프론트엔드가 명세만 보고 병렬로 개발하게 했습니다. PR 템플릿에 \"프론트는 Swagger만 보고 작업한다\"는 원칙도 명문화했습니다.",
       },
       {
         title: "외부 데이터 API 장애 대응",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
       { src: "/images/monitor.png", caption: "송출 모니터링 페이지 — FE 테스트용으로 제작" },
     ],
     period: "2026.01 – 2026.02.09",
-    team: "7인 (BE 3 · FE 4)",
+    team: "8인 (BE 3 · FE 5)",
     role: "백엔드 — 스트리밍 도메인·AWS 인프라 담당, 발표자료 제작",
     stack: [
       { label: "Framework", value: "FastAPI" },
@@ -182,7 +182,7 @@ export const projects: Project[] = [
     image: "/images/work-1.png",
     detailImages: [{ src: "/images/megabox_detail.png", caption: "서비스 화면" }],
     period: "2025.10 – 2026.02 (원본 백엔드 레포 기준)",
-    team: "백엔드 4인 + 프론트엔드 별도",
+    team: "7인 (BE 4 · FE 3)",
     role: "서비스 기획(페이지별 기능·URL·권한 명세), DB 설계(ERD), 커뮤니티 게시판 개발",
     stack: [
       { label: "Framework", value: "FastAPI (팀 프론트엔드: React 19)" },
