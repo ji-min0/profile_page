@@ -5,9 +5,9 @@ export type AboutLang = { paragraphs: string[]; tabs: { skills: TabItem[]; exper
 export const about: { kr: AboutLang; en: AboutLang } = {
   "kr": {
     "paragraphs": [
-      "저는 일이 시작되기 전에 무엇을, 어떤 기준으로 만들지를 먼저 정하는 사람입니다. 기준이 없으면 같은 기능을 두고도 사람마다 다른 그림을 그리고, 그 차이는 결국 일정 지연과 재작업으로 돌아옵니다. 그래서 요구사항과 정책, 예외 상황을 문서로 먼저 맞추고, 그 문서가 팀이 판단할 때 기대는 기준이 되도록 만드는 데 시간을 씁니다.",
-      "기획만 하는 사람이 되고 싶지는 않았습니다. 백엔드를 직접 개발하고 AWS로 서비스를 배포해 보면서, 기획서의 한 줄이 개발에서는 얼마나 큰 일이 되는지, 개발자가 어디서 막히는지를 알게 됐습니다. 그래서 진행이 막히면 기다리기보다 문제를 나눠 먼저 움직이고, 되는 것과 어려운 것을 개발자와 같은 언어로 이야기하려 합니다.",
-      "국어국문학을 전공하며 생각을 글로 정리하는 법을 배웠고, 학생홍보대사로 100명 넘는 사람들 앞에서 설명해 왔습니다. 서로 다른 언어를 쓰는 사람들 사이에서 내용을 정확하게 옮기는 일이 제가 가장 잘할 수 있는 일이라고 생각합니다. 지금은 코디세이에서 AI를 공부하며, 새로운 도구를 실무에 맞게 쓰되 결과는 직접 확인하고 설명하는 습관을 기르고 있습니다."
+      "기획부터 API 명세, AWS 인프라까지 직접 다뤄본, 개발을 아는 PM을 지향합니다. 저는 만들기 전에 기준부터 세웁니다. 기준이 없으면 같은 기능을 두고도 사람마다 다른 그림을 그리고, 그 차이는 결국 일정 지연과 재작업으로 돌아오기 때문입니다. 7명이 동시에 개발을 시작해야 했던 게임 추천 서비스에서 API 명세 57건을 먼저 확정해, FE와 BE가 서로를 기다리지 않고 병렬로 개발하게 한 것도 그래서였습니다.",
+      "막히면 기다리기보다 먼저 움직입니다. 외부 게임 데이터 API가 멈췄을 때는 키 재발급을 기다리지 않고, 팀원들의 코드를 건드리지 않도록 스키마를 그대로 둔 채 다른 API로 바꿔 동기화를 되살렸습니다. 코드 리뷰에서도 \"동작하는가\"보다 \"운영에서 어떻게 깨질 수 있는가\"를 먼저 보고, AI가 내놓은 제안도 근거를 확인한 뒤에 받아들이거나 반박합니다.",
+      "국어국문학을 전공하며 생각을 글로 정리하는 법을, 학생홍보대사로 100명 넘는 사람들 앞에서 설명하는 법을 익혔습니다. 개발자의 언어와 다른 직군의 언어 사이에서 내용을 정확하게 옮기는 일이 PM으로서 제가 가장 잘할 수 있는 일이라고 생각합니다. 지금은 코디세이 AI 올인원 과정에서 AI 기술을 익히며 다룰 수 있는 범위를 넓히고 있습니다."
     ],
     "tabs": {
       "skills": [
@@ -80,9 +80,9 @@ export const about: { kr: AboutLang; en: AboutLang } = {
   },
   "en": {
     "paragraphs": [
-      "I am someone who decides what to build, and by what standard, before the work begins. Without a shared standard, people picture the same feature differently, and that gap eventually comes back as delays and rework. So I spend time aligning requirements, policies, and edge cases in writing first, and making those documents the reference the team relies on when making decisions.",
-      "I never wanted to be someone who only plans. By building backends myself and deploying services on AWS, I learned how much work a single line in a spec can become, and where developers get stuck. When progress stalls, I break the problem down and move first instead of waiting, and I try to talk about what is feasible and what is hard in the same language developers use.",
-      "Studying Korean Language and Literature taught me to organize my thinking in writing, and as a student ambassador I explained things to audiences of over 100 people. I believe my greatest strength is carrying meaning accurately between people who speak different professional languages. I am currently studying AI at Codyssey, building the habit of using new tools practically while verifying and explaining their results myself."
+      "I aim to be a PM who understands development, having worked hands-on from planning and API specifications to AWS infrastructure. I set the standard before anything is built. Without one, people picture the same feature differently, and that gap eventually comes back as delays and rework. That is why, on a game recommendation service where seven people had to start at once, I finalized 57 API specifications up front so frontend and backend could develop in parallel without waiting on each other.",
+      "When something blocks progress, I move first instead of waiting. When our external game data API went down, I did not wait for a new key; I switched to another API while keeping the schema unchanged so teammates' code was untouched, and brought syncing back. In code reviews I ask how something could break in production before asking whether it works, and I accept or push back on AI suggestions only after checking the evidence.",
+      "Studying Korean Language and Literature taught me to organize my thinking in writing, and serving as a student ambassador taught me to explain things to audiences of over 100 people. I believe carrying meaning accurately between developers and other roles is what I can do best as a PM. I am currently broadening what I can handle by studying AI in the Codyssey AI program."
     ],
     "tabs": {
       "skills": [
