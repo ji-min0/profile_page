@@ -21,7 +21,7 @@ export const about: { kr: AboutLang; en: AboutLang } = {
         },
         {
           "label": "언어 / 프레임워크",
-          "value": "Python, Django, Django REST Framework, FastAPI"
+          "value": "Python, Django, Django REST Framework, FastAPI, Flask"
         },
         {
           "label": "데이터베이스",
@@ -96,7 +96,7 @@ export const about: { kr: AboutLang; en: AboutLang } = {
         },
         {
           "label": "Language / Frameworks",
-          "value": "Python, Django, Django REST Framework, FastAPI"
+          "value": "Python, Django, Django REST Framework, FastAPI, Flask"
         },
         {
           "label": "Database",

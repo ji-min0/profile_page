@@ -8,9 +8,6 @@ export default function Footer() {
           <a href="https://github.com/ji-min0" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="https://hello-dev-world.tistory.com/" target="_blank" rel="noopener noreferrer">
-            Blog
-          </a>
         </span>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FaBook, FaGithub, FaRegEnvelope } from "react-icons/fa6";
+import { FaGithub, FaRegEnvelope } from "react-icons/fa6";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = { title: "Contact" };
@@ -18,9 +18,6 @@ export default function ContactPage() {
           <div className="social-icons">
             <a href="https://github.com/ji-min0" target="_blank" rel="noopener noreferrer">
               <FaGithub /> github
-            </a>
-            <a href="https://hello-dev-world.tistory.com/" target="_blank" rel="noopener noreferrer">
-              <FaBook /> blog
             </a>
           </div>
           <a href="/images/my-cv.pdf" download className="btn btn-fill">

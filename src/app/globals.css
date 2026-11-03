@@ -699,6 +699,161 @@ img {
   justify-content: flex-end;
 }
 
+/* diagrams */
+.diagrams {
+  margin-top: 72px;
+}
+
+.diagrams > h2,
+.gallery > h2,
+.extras > h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.diagram {
+  margin-bottom: 56px;
+}
+
+.diagram h3 {
+  font-size: 19px;
+  margin-bottom: 14px;
+  color: var(--accent);
+}
+
+.diagram-img {
+  display: block;
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.diagram-img img {
+  width: 100%;
+  height: auto;
+}
+
+.diagram-zoom {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(67, 62, 73, 0.85);
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.diagram-img:hover .diagram-zoom,
+.diagram-img:focus-visible .diagram-zoom {
+  opacity: 1;
+}
+
+.diagram figcaption {
+  margin-top: 10px;
+  color: var(--text-sub);
+  font-size: 14px;
+}
+
+.diagram-points {
+  margin-top: 18px;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.diagram-points li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.diagram-points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.75em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+}
+
+/* 상황 · 판단 · 결과 */
+.steps {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 10px;
+}
+
+.step dt {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  padding-top: 3px;
+}
+
+.step dd {
+  color: var(--text-sub);
+  line-height: 1.85;
+  font-size: 16px;
+}
+
+.step-result dt {
+  color: var(--text);
+}
+
+.step-result dd {
+  color: var(--text);
+}
+
+.extras {
+  margin-top: 56px;
+}
+
+.extras ul {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.extras li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--text-sub);
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+.extras li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.75em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+}
+
 /* ---------- contact ---------- */
 .contact-row {
   display: flex;
@@ -892,6 +1047,13 @@ img {
   }
   .pager {
     grid-template-columns: 1fr;
+  }
+  .step {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .diagram-zoom {
+    opacity: 1;
   }
   .site-footer a {
     margin: 0 18px 0 0;
