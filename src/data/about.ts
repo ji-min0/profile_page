@@ -5,9 +5,9 @@ export type AboutLang = { paragraphs: string[]; tabs: { skills: TabItem[]; exper
 export const about: { kr: AboutLang; en: AboutLang } = {
   "kr": {
     "paragraphs": [
-      "기획부터 API 명세, AWS 인프라까지 직접 다뤄본, 개발을 아는 PM을 지향합니다. 저는 만들기 전에 기준부터 세웁니다. 기준이 없으면 같은 기능을 두고도 사람마다 다른 그림을 그리고, 그 차이는 결국 일정 지연과 재작업으로 돌아오기 때문입니다. 7명이 동시에 개발을 시작해야 했던 게임 추천 서비스에서 API 명세 57건을 먼저 확정해, FE와 BE가 서로를 기다리지 않고 병렬로 개발하게 한 것도 그래서였습니다.",
-      "막히면 기다리기보다 먼저 움직입니다. 외부 게임 데이터 API가 멈췄을 때는 키 재발급을 기다리지 않고, 팀원들의 코드를 건드리지 않도록 스키마를 그대로 둔 채 다른 API로 바꿔 동기화를 되살렸습니다. 코드 리뷰에서도 \"동작하는가\"보다 \"운영에서 어떻게 깨질 수 있는가\"를 먼저 보고, AI가 내놓은 제안도 근거를 확인한 뒤에 받아들이거나 반박합니다.",
-      "국어국문학을 전공하며 생각을 글로 정리하는 법을, 학생홍보대사로 100명 넘는 사람들 앞에서 설명하는 법을 익혔습니다. 개발자의 언어와 다른 직군의 언어 사이에서 내용을 정확하게 옮기는 일이 PM으로서 제가 가장 잘할 수 있는 일이라고 생각합니다. 지금은 코디세이 AI 올인원 과정에서 AI 기술을 익히며 다룰 수 있는 범위를 넓히고 있습니다."
+      "기획부터 API 명세, 백엔드 개발, AWS 인프라까지 직접 다뤄본, 개발을 아는 PM을 지향합니다. 요구사항 정의와 API 명세, 권한·상태 흐름 설계, 이벤트 기반 AWS 구성과 배포 보안까지 서비스가 만들어지는 과정을 직접 경험했고, 개발팀 멘토(러닝헬퍼)로 기획과 코드 리뷰를 맡았습니다. 지금은 코디세이 AI 올인원 과정에서 AI 기술을 익히며 다룰 수 있는 범위를 넓히고 있습니다.",
+      "제가 가장 중요하게 여기는 건 팀이 같은 기준으로 움직이는 것입니다. 개발이 시작되기 전에 확정된 명세, 상황마다 의미가 다른 응답 코드, 현장의 실수까지 예상한 예외 정책, 그리고 \"동작하는가\"보다 \"운영에서 어떻게 깨질 수 있는가\"를 먼저 보는 리뷰가 그 기준을 만든다고 생각합니다. 진행이 막히면 기다리기보다 문제를 나눠 먼저 움직이고, AI가 내놓은 결과도 근거를 확인한 뒤에 씁니다.",
+      "국어국문학을 전공하며 생각을 글로 정리하는 법을, 학생홍보대사로 100명 넘는 사람들 앞에서 설명하는 법을 익혔습니다. 개발자의 언어와 다른 직군의 언어 사이에서 내용을 정확하게 옮기고, 합의한 것을 누구나 읽을 수 있는 문서로 남기는 일이 PM으로서 제가 가장 잘할 수 있는 일입니다."
     ],
     "tabs": {
       "skills": [
@@ -80,9 +80,9 @@ export const about: { kr: AboutLang; en: AboutLang } = {
   },
   "en": {
     "paragraphs": [
-      "I aim to be a PM who understands development, having worked hands-on from planning and API specifications to AWS infrastructure. I set the standard before anything is built. Without one, people picture the same feature differently, and that gap eventually comes back as delays and rework. That is why, on a game recommendation service where seven people had to start at once, I finalized 57 API specifications up front so frontend and backend could develop in parallel without waiting on each other.",
-      "When something blocks progress, I move first instead of waiting. When our external game data API went down, I did not wait for a new key; I switched to another API while keeping the schema unchanged so teammates' code was untouched, and brought syncing back. In code reviews I ask how something could break in production before asking whether it works, and I accept or push back on AI suggestions only after checking the evidence.",
-      "Studying Korean Language and Literature taught me to organize my thinking in writing, and serving as a student ambassador taught me to explain things to audiences of over 100 people. I believe carrying meaning accurately between developers and other roles is what I can do best as a PM. I am currently broadening what I can handle by studying AI in the Codyssey AI program."
+      "I aim to be a PM who understands development, having worked hands-on across planning, API specifications, backend development, and AWS infrastructure. I have handled requirements definition, API specs, permission and state-flow design, event-driven AWS setups, and deployment security, and I have served as a development team mentor (Learning Helper) responsible for planning and code review. I am currently broadening that range by studying AI in the Codyssey AI program.",
+      "What I care about most is a team moving by the same standard. I believe that standard comes from specs finalized before development starts, response codes that mean something different in each situation, exception policies that anticipate real-world mistakes, and reviews that ask how something could break in production before asking whether it works. When progress stalls, I break the problem down and move first rather than wait, and I use AI output only after checking the evidence behind it.",
+      "Studying Korean Language and Literature taught me to organize my thinking in writing, and serving as a student ambassador taught me to explain things to audiences of over 100 people. Carrying meaning accurately between developers and other roles, and turning what was agreed into documents anyone can read, is what I can do best as a PM."
     ],
     "tabs": {
       "skills": [
