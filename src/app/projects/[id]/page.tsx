@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaMagnifyingGlassPlus } from "react-icons/fa6";
-import { getProject, projects, type Highlight } from "@/data/projects";
+import { getProject, projects } from "@/data/projects";
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -15,12 +15,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) return {};
   return { title: project.title, description: project.summary };
 }
-
-const STEPS: { key: keyof Highlight; label: string }[] = [
-  { key: "situation", label: "상황" },
-  { key: "decision", label: "판단" },
-  { key: "result", label: "결과" },
-];
 
 export default async function ProjectDetail({ params }: Props) {
   const { id } = await params;
@@ -93,17 +87,7 @@ export default async function ProjectDetail({ params }: Props) {
                 <span className="highlight-num">{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <h3>{h.title}</h3>
-                  {h.body && <p>{h.body}</p>}
-                  {STEPS.some((s) => h[s.key]) && (
-                    <dl className="steps">
-                      {STEPS.filter((s) => h[s.key]).map((s) => (
-                        <div key={s.key} className={`step step-${s.key}`}>
-                          <dt>{s.label}</dt>
-                          <dd>{h[s.key]}</dd>
-                        </div>
-                      ))}
-                    </dl>
-                  )}
+                  <p>{h.body}</p>
                 </div>
               </div>
             ))}
