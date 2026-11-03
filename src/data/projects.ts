@@ -68,9 +68,14 @@ export const projects: Project[] = [
     ],
     highlights: [
       {
+        title: "행동 가중치·어뷰징 방지 정책 설계",
+        body:
+          "추천의 원재료인 행동 로그를 어떤 점수로 바꿀지 기획 단계에서 정책으로 정했습니다. 조회·검색·찜·좋아요·외부 스토어 클릭 등 8가지 행동에 기본 가중치(조회 0.2 ~ 온보딩 선호 설정 1.3, 찜 제거·싫어요 -1)를 두고, 행동이 일어난 위치에 따라 배율(목록 0.9 ~ 온보딩 1.5)을 곱하도록 했습니다. 같은 행동을 반복하면 0.9씩 감쇠시키고 2분 30초 안의 동일 행동은 무시해, 클릭을 반복해 추천을 조작하는 것을 막았습니다. 가중치는 기록 시점 값으로 스냅샷해 관리자가 규칙을 바꿔도 과거 기록이 흔들리지 않게 했고, 행동 로그는 수정·삭제 없는 append-only로 두어 추천 재계산과 디버깅의 원본으로 삼았습니다.",
+      },
+      {
         title: "기획·명세 선확정",
         body:
-          "BE와 FE가 동시에 시작해 서로 기다리면 일정이 밀리는 구조였습니다. 개발보다 기준 문서를 먼저 확정하기로 하고, 기능 범위·화면 흐름·정책을 Notion에 정리한 뒤 ERD와 API 명세 57건(7개 도메인)에 요청·응답·상태코드·중요도·개발 여부·정책 메모까지 정의해 담당자를 배정했습니다. FE는 명세만 보고 화면을 병렬로 개발했고, PR 템플릿에 \"프론트는 Swagger만 보고 작업한다\"는 원칙과 문서화·에러 상수화 기준을 명문화했습니다.",
+          "BE와 FE가 동시에 시작해 서로 기다리면 일정이 밀리는 구조였습니다. 개발보다 기준 문서를 먼저 확정하기로 하고, 기능 범위·화면 흐름·정책을 Notion에 정리한 뒤 ERD와 API 명세 57건(7개 도메인)에 요청·응답·상태코드·중요도·개발 여부·정책 메모까지 정의해 담당자를 배정했습니다. FE는 명세만 보고 화면을 병렬로 개발했고, PR 템플릿에 \"프론트는 Swagger만 보고 작업한다\"는 원칙과 문서화·에러 상수화 기준을 명문화했습니다. 이렇게 정한 기준을 따라 개발이 진행돼 실서비스 배포까지 이어졌습니다.",
       },
       {
         title: "외부 데이터 API 장애 대응",
@@ -96,6 +101,7 @@ export const projects: Project[] = [
       "Django 초기 세팅, Docker Compose, GitHub Actions CI, EC2·CloudFront 배포",
     ],
     links: [
+      { label: "기획서", url: "https://app.notion.com/p/40d78eb684238092ad9aedf3c5042c04?source=copy_link" },
       { label: "GitHub", url: "https://github.com/GechuProject/gechu-backend" },
       { label: "API 명세서", url: "https://docs.google.com/spreadsheets/d/1KBn3Z7lQNqW6yL6VtGvdBrlzL_bGNrJ3/edit?gid=826222313#gid=826222313" },
       { label: "ERD", url: "https://dbdiagram.io/d/game_reco_v2-69a31200a3f0aa31e164f1e1" },
