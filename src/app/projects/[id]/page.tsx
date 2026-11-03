@@ -73,6 +73,16 @@ export default async function ProjectDetail({ params }: Props) {
                   ))}
                 </ul>
               )}
+              {d.improvements && (
+                <div className="diagram-improve">
+                  <strong>알려진 개선점</strong>
+                  <ul>
+                    {d.improvements.map((pt) => (
+                      <li key={pt}>{pt}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </figure>
           ))}
         </section>

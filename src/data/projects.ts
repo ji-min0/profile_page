@@ -1,7 +1,7 @@
 export type Stat = { value: string; label: string };
 export type ProjectLink = { label: string; url: string };
 export type DetailImage = { src: string; caption: string };
-export type Diagram = DetailImage & { title: string; points?: string[] };
+export type Diagram = DetailImage & { title: string; points?: string[]; improvements?: string[] };
 
 export type Highlight = { title: string; body: string };
 
@@ -131,6 +131,10 @@ export const projects: Project[] = [
           "8000 포트는 CloudFront 관리형 프리픽스 리스트에서 오는 요청만 허용합니다.",
           "OIDC·코어 서비스·EventBridge 웹훅은 CloudFormation 스택 3개로 코드화했습니다.",
           "배포는 GitHub Actions가 OIDC로 IAM Role을 받아 ECR에 이미지를 올리고 EC2에서 pull합니다.",
+        ],
+        improvements: [
+          "SSH(22)가 전체 IP에 열려 있습니다. 서비스 트래픽과 달리 관리자만 쓰는 포트이므로 SSM Session Manager로 대체하거나, 배포 중에만 GitHub Actions Runner IP를 허용하고 회수하는 방식으로 좁힐 수 있습니다.",
+          "앱의 AWS 호출(IVS·S3)은 필요한 권한만 부여한 IAM 유저 액세스 키를 사용합니다. ECR 인증은 이미 EC2 역할로 바꿨고, 앱 호출도 역할로 옮기면 만료 없는 장기 키를 서버에 둘 필요가 없어집니다.",
         ],
       },
     ],
